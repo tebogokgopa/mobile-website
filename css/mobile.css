@@ -1,0 +1,223 @@
+body{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    *{
+        box-sizing: border-box;
+    }
+    
+    html,body{
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Ropa sans',sans-serif;
+        background: whitesmoke;
+    }
+    
+    .slider{
+        width: 95vw;
+        height: 95vh;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 0;
+        padding: 10px;
+    }
+    
+    .slides{
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 0;
+    }
+    
+    .slides::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+    }
+    
+    .slides::-webkit-scrollbar-thumb{
+        border-radius: 3%;
+    }
+    
+    .slides::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    
+    .slides > article{
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 90vw;
+        height: 80vh;
+        border-radius: 3%;
+        transform-origin: center;
+        transform: scale(1);
+        transition: 0.5s;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer > a{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        padding: auto;
+        background: transparent;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: relative;
+    }
+    
+    footer > a:active{
+        top: 1px;
+    }
+    
+    footer > a:focus{
+        background: white;
+        color: navy;
+    }
+    
+    @supports (scroll-snap-type: mandatory){
+        .slider > a {
+            display: none;
+        }
+    }
+    footer{
+        display: flex;
+        bottom: 0;
+        width: 95vw;
+        height: 9vh;
+        position: fixed;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer a{
+        width: 17vw;
+        height: 8vh;
+        border: white 0.5px solid;
+        border-radius: 5%;
+        color: black;
+        margin-bottom: 5vh;
+        display: flex;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        text-decoration: none;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px white;
+    }
+    footer a img{
+        height: 6vh;
+        width: 12vw;
+    }
+    img{
+        height: 40vh;
+        width: 85vw;
+        margin-top: 0;
+        border-radius: 3%;
+    }
+
+    .maintext{
+        font-size: 15px;
+        color: black;
+        background-color: white;
+        height: 40vh;
+        width: 85vw;
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-wrap: nowrap;
+        border-radius: 3%;
+        line-height: 3px;
+        text-wrap: wrap;
+        border: white 0.5px solid;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px white;
+    }
+    .maintext h1{
+        color: navy;
+    }
+    .maintext h2{
+        color: navy;
+    }
+
+    .mainform{
+        font-size: 15px;
+        color: white;
+        background-color: white;
+        height: 75vh;
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-wrap: nowrap;
+        border-radius: 3%;
+        line-height: 3px;
+        text-wrap: wrap;
+        border: white 0.5px solid;
+    }
+
+    form{
+        
+        height: 80vh;
+        width: 85vw;
+        border-radius: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        color: navy;
+        font-size: larger;
+        font-weight: 400;
+    }
+    
+    form h1{
+        text-align: left;
+    }
+
+    form span{
+        text-align: left;
+    }
+    input[type="text"],input[type="email"],input[type="button"]{
+        height: 45px;
+        font-size: 25px;
+        border-radius: 10px;
+    }
+    
+    input[type="button"]{
+        height: 45px;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    textarea{
+        border-radius: 10px;
+    }
+    
+    
+    select{
+        height: 30px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+    
+    .stars{
+        color: red;
+    }
+}
